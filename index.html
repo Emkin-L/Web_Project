@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Modern E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="logo">LUMINA</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <i class="ph ph-magnifying-glass"></i>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle"><i class="ph ph-moon"></i></button>
+            <div class="wishlist-icon"><i class="ph ph-heart"></i><span class="badge">0</span></div>
+            <div class="cart-icon" onclick="toggleCart()"><i class="ph ph-shopping-cart"></i><span class="badge" id="cart-count">0</span></div>
+            <button class="btn-login">Login</button>
+        </div>
+    </nav>
+
+    <main id="app-container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Elevate Your Lifestyle</h1>
+                <p>Minimalist designs for the modern home.</p>
+                <button class="btn-primary">Shop Collection</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <div class="categories">
+                    <span class="active">All</span>
+                    <span>Home</span>
+                    <span>Tech</span>
+                    <span>Apparel</span>
+                </div>
+            </div>
+            <div class="product-grid" id="product-list">
+                </div>
+        </section>
+    </main>
+
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <i class="ph ph-x" onclick="toggleCart()"></i>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="total">Total: $<span id="cart-total">0.00</span></div>
+            <button class="btn-checkout">Checkout</button>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>
