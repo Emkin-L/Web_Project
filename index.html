@@ -3,61 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lumina | Modern E-Commerce</title>
+    <title>Aura | Minimalist Essentials</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body class="light-theme">
+<body>
+
     <nav class="navbar">
-        <div class="logo">LUMINA</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search products...">
-            <i class="ph ph-magnifying-glass"></i>
-        </div>
-        <div class="nav-actions">
-            <button id="theme-toggle"><i class="ph ph-moon"></i></button>
-            <div class="wishlist-icon"><i class="ph ph-heart"></i><span class="badge">0</span></div>
-            <div class="cart-icon" onclick="toggleCart()"><i class="ph ph-shopping-cart"></i><span class="badge" id="cart-count">0</span></div>
-            <button class="btn-login">Login</button>
+        <div class="nav-container">
+            <a href="#" class="logo">AURA</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-icon" id="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main id="app-container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Elevate Your Lifestyle</h1>
-                <p>Minimalist designs for the modern home.</p>
-                <button class="btn-primary">Shop Collection</button>
-            </div>
-        </section>
-
-        <section class="products">
-            <div class="section-header">
-                <h2>Featured Products</h2>
-                <div class="categories">
-                    <span class="active">All</span>
-                    <span>Home</span>
-                    <span>Tech</span>
-                    <span>Apparel</span>
-                </div>
-            </div>
-            <div class="product-grid" id="product-list">
-                </div>
-        </section>
-    </main>
-
-    <aside class="cart-drawer" id="cart-drawer">
-        <div class="cart-header">
-            <h3>Your Cart</h3>
-            <i class="ph ph-x" onclick="toggleCart()"></i>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">New Collection 2026</span>
+            <h1>Minimal Style.<br>Maximum Comfort.</h1>
+            <p>Experience the purity of design with our handcrafted sustainable essentials.</p>
+            <a href="#products" class="btn-primary">Shop Now</a>
         </div>
-        <div id="cart-items"></div>
-        <div class="cart-footer">
-            <div class="total">Total: $<span id="cart-total">0.00</span></div>
-            <button class="btn-checkout">Checkout</button>
+        <div class="hero-image">
+            <div class="image-placeholder"></div>
         </div>
-    </aside>
+    </header>
 
-    <script src="app.js"></script>
+    <section id="products" class="products">
+        <div class="section-header">
+            <h2>Curated Collection</h2>
+            <p>Quality materials, timeless silhouettes.</p>
+        </div>
+        <div class="product-grid" id="product-grid">
+            </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Our Philosophy</h2>
+                <p>We believe that less is more. Our mission is to provide high-quality, ethically sourced products that stand the test of time, both in durability and style.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>AURA</h3>
+                <p>Modern essentials for a conscious lifestyle.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast">Added to cart!</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
